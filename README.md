@@ -25,6 +25,7 @@ docker run \
   -it sequenceiq/hadoop-docker:2.7.1 \
   /usr/local/hadoop/py/py_runner.sh grep
 ```
+(notice the **grep** keyword at the end - corresponds to the folder **grep**!)
 
 expected output:
 
@@ -40,6 +41,7 @@ docker run \
   -it sequenceiq/hadoop-docker:2.7.1 \
   /usr/local/hadoop/py/py_runner.sh count
 ```
+(notice the **count** keyword at the end  - corresponds to the folder **count**!)
 
 expected output:
 
