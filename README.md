@@ -11,6 +11,8 @@ Generally speaking, on the top level there are folders that must contain:
 __ENSURE THAT .py FILES HAVE `chmod +x` PERMISSIONS__
 (This is hadoop requirement)
 
+Of course, the idea is to add more folders that demonstrate different aggregations that can be achieved with MapReduce over different datasaets (that are available in the sample folder). The aspiration was to make something reusable quickly and cheaply.
+
 ## Usage
 
 1. Download this repo
@@ -30,4 +32,20 @@ expected output:
 foo	6
 quux	4
 ```
+Another example:
 
+```
+docker run \
+  -v $(pwd):/usr/local/hadoop/py \
+  -it sequenceiq/hadoop-docker:2.7.1 \
+  /usr/local/hadoop/py/py_runner.sh count
+```
+
+expected output:
+
+```
+bar	0
+foo	6
+labs	0
+quux	4
+```
