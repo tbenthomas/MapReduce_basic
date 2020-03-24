@@ -33,6 +33,10 @@ expected output:
 foo	6
 quux	4
 ```
+
+*Question*: How would you update the simple grep above to manage __any__ type of search? (In this case it encodes the "f" / "x" searching inside the reducer function). 
+
+
 Another example:
 
 ```
