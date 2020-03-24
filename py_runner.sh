@@ -15,7 +15,7 @@ ${THIS_DIR}/bin/hadoop jar \
     -file ${THIS_DIR}/py/${SUB_DIR}mapper.py \
     -mapper ${THIS_DIR}/py/${SUB_DIR}mapper.py \
     -file ${THIS_DIR}/py/${SUB_DIR}reducer.py	\
-    -reducer ${THIS_DIR}/py/${SUB_DIR}reducer.py \
+    -reducer "${THIS_DIR}/py/${SUB_DIR}reducer.py ${*:2}" \
     -input ${THIS_DIR}/sample/* \
     -output ${THIS_DIR}/py-output
 ${THIS_DIR}/bin/hdfs dfs -cat ${THIS_DIR}/py-output/*
