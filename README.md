@@ -14,7 +14,7 @@ docker run \
   -it sequenceiq/hadoop-docker:2.7.1 \
   /usr/local/hadoop/py/py_runner.sh grep {pattern}
 
-The {pattern should be replace by any kind of pattern or valid regular expression. 
+The {pattern} should be replaced by any kind of pattern or valid regular expression. 
 
 Example use:
 docker run \
