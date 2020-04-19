@@ -7,6 +7,10 @@ if [ -n "$1" ];
 then SUB_DIR="$1/" 
 fi
 
+export PATTERN=$2
+
+
+
 ${THIS_DIR}/bin/hadoop dfsadmin -safemode leave
 ${THIS_DIR}/bin/hadoop fs -mkdir -p ${THIS_DIR}/sample
 ${THIS_DIR}/bin/hdfs dfs -put ${THIS_DIR}/py/${SUB_DIR}sample/* ${THIS_DIR}/sample
@@ -17,5 +21,8 @@ ${THIS_DIR}/bin/hadoop jar \
     -file ${THIS_DIR}/py/${SUB_DIR}reducer.py	\
     -reducer "${THIS_DIR}/py/${SUB_DIR}reducer.py ${*:2}" \
     -input ${THIS_DIR}/sample/* \
-    -output ${THIS_DIR}/py-output
+    -output ${THIS_DIR}/py-output \
+    -cmdenv PATTERN=${PATTERN} 
+
 ${THIS_DIR}/bin/hdfs dfs -cat ${THIS_DIR}/py-output/*
+
