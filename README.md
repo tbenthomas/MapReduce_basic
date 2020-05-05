@@ -1,5 +1,5 @@
 # MapReduce
-This repo is a clone of https://github.com/mottaquikarim/STA9760_MapReduce . In this repo the mapper.py in the grep folder has been edited to allow user input of regex expressions to our mapper function, allowing the user to mange any type of search in their mapreduce job. 
+This repo is a clone of https://github.com/mottaquikarim/STA9760_MapReduce . In this repo the mapper.py and py_runner.sh in the grep folder has been edited to allow user input of regex expressions to our mapper function, allowing the user to mange any type of search in their mapreduce job. 
 
 This repo provides 
 ## Usage
